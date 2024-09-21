@@ -11,7 +11,7 @@ public class WISBottomUp {
     }
     
 
-    public int iterativeComputeOptt() {
+    public int iterativeComputeOpt() {
         int[] M = new int[jobs.length + 1];
         M[0] = 0;
 
