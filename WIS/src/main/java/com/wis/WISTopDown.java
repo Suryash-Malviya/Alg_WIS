@@ -24,9 +24,9 @@ public class WISTopDown {
 
         else {
             memo[j] = Math.max(
-                        this.jobs[j - 1].weight + mComputeOpt(p(j)), 
-                        mComputeOpt(j - 1));
-                        
+                    this.jobs[j - 1].weight + mComputeOpt(p(j)),
+                    mComputeOpt(j - 1));
+
             return memo[j];
         }
     }
@@ -38,5 +38,12 @@ public class WISTopDown {
             }
             return 0;
         }
+    }
+
+    public long calculateExecutionTime(int jobIndex) {
+        long startTime = System.nanoTime();
+        mComputeOpt(jobIndex);
+        long endTime = System.nanoTime();
+        return endTime - startTime;
     }
 }

@@ -31,4 +31,11 @@ public class WISBottomUp {
         }
         return 0;
     }
+
+    public long calculateExecutionTime(int jobIndex) {
+        long startTime = System.nanoTime();
+        iterativeComputeOpt();
+        long endTime = System.nanoTime();
+        return endTime - startTime;
+    }
 }
